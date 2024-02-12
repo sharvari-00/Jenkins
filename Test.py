@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import unittest
 from Prg1 import summation
 
