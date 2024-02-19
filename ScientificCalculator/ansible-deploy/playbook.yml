@@ -1,0 +1,16 @@
+---
+- name: Pull docker image of Calculator
+  hosts: all
+  tasks:
+
+    - name: Start Docker service
+      service:
+        name: docker
+        state: started
+
+    - name: Pull Docker image
+      shell: docker pull docker.io/sharvari00/scientific_calc
+
+    - name: Run Docker container
+      shell: docker run -it -d sharvari00/scientific_calc
+
